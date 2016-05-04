@@ -46,6 +46,7 @@ Google({"clientId": String, "appScope": Array<String>, "redirectUri": String});
 Imgur({"clientId": String, "redirectUri": String});
 Instagram({"clientId": String, "appScope": Array<String>, "redirectUri": String});
 Meetup({"clientId": String, "redirectUri": String});
+Mondo({"clientId": String, "redirectUri": String, "stateToken": String});
 ```
 
 Each API call returns a promise.  The success callback will provide a response object and the error
