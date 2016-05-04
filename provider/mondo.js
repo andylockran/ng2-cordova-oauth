@@ -7,17 +7,9 @@ var Mondo = (function () {
         if (!options.clientId || options.clientId == "") {
             throw Error("A " + PROVIDER_NAME + " client id must exist");
         }
-        if (!options.appScope || options.appScope.length <= 0) {
-            throw Error("A " + PROVIDER_NAME + " app scope must exist");
-        }
         this.MondoOptions = options;
         this.MondoOptions.redirectUri = options.hasOwnProperty("redirectUri") ? options.redirectUri : "http://localhost/callback";
-        this.MondonOptions.stateToken = null;
         this.flowURL = "https://auth.getmondo.co.uk/?client_id=" + this.MondoOptions.clientId + "&redirect_uri=" + this.MondoOptions.redirectUri + "&response_type=code&state=" + this.MondoOptions.stateToken;
-        //this.flowUrl = "https://www.Mondo.com/v2.0/dialog/oauth?client_id=" + this.MondoOptions.clientId + "&redirect_uri=" + this.MondoOptions.redirectUri + "&response_type=token&scope=" + this.MondoOptions.appScope.join(",");
-        if (options !== undefined && options.hasOwnProperty("authType")) {
-            this.flowUrl += "&auth_type=" + options.authType;
-        }
     }
     Mondo.prototype.login = function () {
         var _this = this;
