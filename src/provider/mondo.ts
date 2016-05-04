@@ -24,7 +24,7 @@ export class Mondo implements IOauthProvider {
         }
         this.MondoOptions = options;
         this.MondoOptions.redirectUri = options.hasOwnProperty("redirectUri") ? options.redirectUri : "http://localhost/callback";
-        this.flowURL = "https://auth.getmondo.co.uk/?client_id=" + this.MondoOptions.clientId + "&redirect_uri=" + this.MondoOptions.redirectUri + "&response_type=code&state=" + this.MondoOptions.stateToken;
+        this.flowUrl = "https://auth.getmondo.co.uk/?client_id=" + this.MondoOptions.clientId + "&redirect_uri=" + this.MondoOptions.redirectUri + "&response_type=code&state=" + this.MondoOptions.stateToken;
     }
 
     login() {

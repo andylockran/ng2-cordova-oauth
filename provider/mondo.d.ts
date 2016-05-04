@@ -5,7 +5,7 @@ export interface IMondoOptions {
     stateToken?: String;
 }
 export declare class Mondo implements IOauthProvider {
-    mondoOptions: IMondoOptions;
+    MondoOptions: IMondoOptions;
     flowUrl: String;
     constructor(options?: IMondoOptions);
     login(): Promise<{}>;
